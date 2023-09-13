@@ -15,7 +15,7 @@ export class ListarInventarioComponent implements OnInit {
     this.listarInventario();
   }
 
-  listarInventario(): void {
+  listarInventario = (): void => {
     this.inventarioService.list_inventario().subscribe(
       (response) => {
         this.products = response;
@@ -25,7 +25,7 @@ export class ListarInventarioComponent implements OnInit {
         console.error('Error al obtener el inventario:', error);
       }
     );
-  }
+  };  
 }
 
   
